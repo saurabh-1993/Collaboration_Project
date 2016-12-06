@@ -1,0 +1,35 @@
+ <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+<body ng-app="myApp" class="ng-cloak">
+
+	<div class="generic-container" ng-controller="EventController as sau">
+	
+	<!-- <p><button class ="btn btn-success" href ="#/createEvent">Create</button></p> -->
+	<div id="section2" class ="container-fluid">
+	
+	<table class="table table-striped">
+  <tr ng-repeat="event in sau.events">
+    <td>{{event.id }}</td>
+    <td>{{event.name}}</td>
+    <td>{{event.description}}</td>
+
+   
+  </tr>
+  
+</table>
+</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="c_event/EventController.js"></script>
+		<script src="c_event/EventService.js"></script>
+	
+	
+	</body>

@@ -1,0 +1,35 @@
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+
+
+
+
+
+<body ng-app="myApp" class="ng-cloak">
+
+	<div class="generic-container" ng-controller="JobController as ctrl">
+	 <table class="table table-striped">
+  <tr ng-repeat="job in ctrl.jobs">
+    <td>{{job.id }}</td>
+    <td>{{job.status}}
+    <td>{{job.description}}</td>
+    <td><button class ="btn btn-success" ng-click="ctrl.applyJob(ctrl.job.jobID)">Apply</button></td>
+   
+  </tr>
+  
+</table>
+	
+	</div>
+	<script src="c_job/JobController.js"></script>
+		<script src="c_job/JobService.js"></script>
+	
+	
+	</body>
